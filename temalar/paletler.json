@@ -1,0 +1,72 @@
+{
+  "prusya": {
+    "ad": "Prusya Mavisi", "koyu": true, "hissi": "mühendislik, güven, ilk video",
+    "zemin": "#123a63", "zemin2": "#0d2c4e", "isik": "#1b4d7f", "murekkep": "#f1f7fb", "cizgi": "#a7d8ec",
+    "vurgu": "#ffc23d", "dolgu": "#d8344a", "dolgu2": "#a31f38", "dolgu3": "#ee4b58", "detay": "#ffd678",
+    "metal": "#dfe8ef", "conta": "#e05f3c", "buhar": "#e8f6ff", "tehlike": "#ff5a4f", "tamam": "#58d6a0",
+    "uyari_zemin": "#24203f", "uyari_isik": "#3a2340", "yazi_zemin": "#fbf8f0", "yazi": "#123a63", "yazi_vurgu": "#c8203a"
+  },
+  "zumrut": {
+    "ad": "Zümrüt Atölye", "koyu": true, "hissi": "doğa, gıda, tarım, sağlık",
+    "zemin": "#0f4438", "zemin2": "#0a2f27", "isik": "#17604f", "murekkep": "#f4f1e4", "cizgi": "#a9dcc4",
+    "vurgu": "#f5c84c", "dolgu": "#ef6f4c", "dolgu2": "#b9432a", "dolgu3": "#ff9268", "detay": "#ffe3a1",
+    "metal": "#e8e4d4", "conta": "#d1495b", "buhar": "#eafff5", "tehlike": "#ff6b5e", "tamam": "#8fe3a7",
+    "uyari_zemin": "#2b2a22", "uyari_isik": "#4a3324", "yazi_zemin": "#f7f3e5", "yazi": "#0f4438", "yazi_vurgu": "#bf3a1f"
+  },
+  "patlican": {
+    "ad": "Patlıcan Gece", "koyu": true, "hissi": "genç, teknoloji, gizemli konular",
+    "zemin": "#2c1640", "zemin2": "#1c0d2b", "isik": "#452463", "murekkep": "#f7effb", "cizgi": "#d3b5ea",
+    "vurgu": "#c8f04a", "dolgu": "#ff5d8f", "dolgu2": "#c62e63", "dolgu3": "#ff8fb2", "detay": "#ffe08a",
+    "metal": "#e6ddef", "conta": "#ffa24a", "buhar": "#f4e9ff", "tehlike": "#ff5a5f", "tamam": "#7ff0b0",
+    "uyari_zemin": "#2a1020", "uyari_isik": "#4c1a33", "yazi_zemin": "#fbf6ff", "yazi": "#2c1640", "yazi_vurgu": "#b3135a"
+  },
+  "komur": {
+    "ad": "Kömür Turuncu", "koyu": true, "hissi": "makine, araba, ağır sanayi",
+    "zemin": "#1f2326", "zemin2": "#121517", "isik": "#30363b", "murekkep": "#f3f3ef", "cizgi": "#b5bec4",
+    "vurgu": "#ff8a1f", "dolgu": "#f2b632", "dolgu2": "#c4821a", "dolgu3": "#ffd25e", "detay": "#fff1c0",
+    "metal": "#d9dcdd", "conta": "#ff8a1f", "buhar": "#f0f4f6", "tehlike": "#ff4f40", "tamam": "#6fe0b0",
+    "uyari_zemin": "#2a1a18", "uyari_isik": "#452420", "yazi_zemin": "#f5f3ec", "yazi": "#1f2326", "yazi_vurgu": "#c2410c"
+  },
+  "kiremit": {
+    "ad": "Kiremit", "koyu": true, "hissi": "ev, mutfak, yerel, sıcak konular",
+    "zemin": "#9c3f26", "zemin2": "#7a2e1a", "isik": "#b8512f", "murekkep": "#fdf3e3", "cizgi": "#f6cfa9",
+    "vurgu": "#ffe08a", "dolgu": "#1f8a8a", "dolgu2": "#146565", "dolgu3": "#37b0a8", "detay": "#fff2c8",
+    "metal": "#f3e7d3", "conta": "#2a3f54", "buhar": "#fff1e0", "tehlike": "#fff06a", "tamam": "#b7f0c8",
+    "uyari_zemin": "#4c1c20", "uyari_isik": "#6e2a2c", "yazi_zemin": "#fdf3e3", "yazi": "#6e2a17", "yazi_vurgu": "#0f6a6a"
+  },
+  "okyanus": {
+    "ad": "Okyanus", "koyu": true, "hissi": "su, hava, fizik, temizlik",
+    "zemin": "#0d5563", "zemin2": "#083b46", "isik": "#147385", "murekkep": "#f2fbfb", "cizgi": "#9fe3e6",
+    "vurgu": "#ff9a7a", "dolgu": "#ffb703", "dolgu2": "#d48806", "dolgu3": "#ffd166", "detay": "#fff3c4",
+    "metal": "#e3f0f0", "conta": "#ff7f6b", "buhar": "#effcfc", "tehlike": "#ff6f61", "tamam": "#9df0c0",
+    "uyari_zemin": "#2a2a3d", "uyari_isik": "#46324a", "yazi_zemin": "#f2fbfb", "yazi": "#0d5563", "yazi_vurgu": "#c23a22"
+  },
+  "eskikagit": {
+    "ad": "Eski Kâğıt", "koyu": false, "hissi": "tarih, icat, belgesel",
+    "zemin": "#f3ead6", "zemin2": "#e4d6b8", "isik": "#fbf5e6", "murekkep": "#1d2b4a", "cizgi": "#5a6b8c",
+    "vurgu": "#c8321e", "dolgu": "#d8402e", "dolgu2": "#a52a1c", "dolgu3": "#ee6a55", "detay": "#f7d98a",
+    "metal": "#c9c2b0", "conta": "#1d2b4a", "buhar": "#6b7c9a", "tehlike": "#b81f10", "tamam": "#1f7a4d",
+    "uyari_zemin": "#efd9c4", "uyari_isik": "#f9e8da", "yazi_zemin": "#1d2b4a", "yazi": "#f7efdc", "yazi_vurgu": "#ffc94a"
+  },
+  "buz": {
+    "ad": "Buz", "koyu": false, "hissi": "temiz, tıp, soğutma, elektronik",
+    "zemin": "#e6f1f7", "zemin2": "#cfe2ec", "isik": "#f7fbfd", "murekkep": "#0e2a47", "cizgi": "#4a7393",
+    "vurgu": "#d6136e", "dolgu": "#e0357b", "dolgu2": "#a81c58", "dolgu3": "#f76ba0", "detay": "#ffe2a8",
+    "metal": "#b7c8d4", "conta": "#0e2a47", "buhar": "#5c83a0", "tehlike": "#c20a3a", "tamam": "#0b7d5a",
+    "uyari_zemin": "#f5dde6", "uyari_isik": "#fdeef3", "yazi_zemin": "#0e2a47", "yazi": "#f2f8fc", "yazi_vurgu": "#ff9ac6"
+  },
+  "hardal": {
+    "ad": "Hardal", "koyu": false, "hissi": "uyarı, dikkat çekici, sokak, trafik",
+    "zemin": "#eeb82f", "zemin2": "#d99e14", "isik": "#f8cf58", "murekkep": "#1a1a1a", "cizgi": "#5a4205",
+    "vurgu": "#a31a16", "dolgu": "#c8301f", "dolgu2": "#8f1d12", "dolgu3": "#e8543f", "detay": "#ffe9a8",
+    "metal": "#f5ecd6", "conta": "#1a1a1a", "buhar": "#fff7df", "tehlike": "#a3120c", "tamam": "#0d5f3a",
+    "uyari_zemin": "#e8a13a", "uyari_isik": "#f2b85a", "yazi_zemin": "#1a1a1a", "yazi": "#fff4d0", "yazi_vurgu": "#ffcf3f"
+  },
+  "gul": {
+    "ad": "Gül Kurusu", "koyu": false, "hissi": "bakım, ev hayatı, yumuşak konular",
+    "zemin": "#f0c9c4", "zemin2": "#e3aea8", "isik": "#f9dfda", "murekkep": "#4a1226", "cizgi": "#8a3a50",
+    "vurgu": "#0b5e51", "dolgu": "#b3173f", "dolgu2": "#7f0d2c", "dolgu3": "#d9416a", "detay": "#ffe6c4",
+    "metal": "#f5ebe6", "conta": "#0d6b5c", "buhar": "#fff4f0", "tehlike": "#a80f2b", "tamam": "#0b5e51",
+    "uyari_zemin": "#eab2a8", "uyari_isik": "#f5cdc4", "yazi_zemin": "#4a1226", "yazi": "#fde9e4", "yazi_vurgu": "#8fe3c9"
+  }
+}
