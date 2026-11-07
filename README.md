@@ -24,7 +24,7 @@ Bir konuyu bir kez çizersin; aynı film 10 palet, 6 sunum şekli ve 3 kompozisy
 
 ## Hızlı başlangıç
 
-Kodlar [anidoodle](https://github.com/alexgreensh/anidoodle) motoruyla açılmış bir film klasörüne kurulur. Klasörü `yeni_proje.sh` açar.
+Kodlar [anidoodle](https://github.com/alexgreensh/anidoodle) motoruyla açılmış bir film klasörüne kurulur. Klasörü [Animasyon Stüdyosu](https://github.com/TR-KOBRA/animasyon-studyosu) içindeki `yeni_proje.sh` açar.
 
 ```bash
 python araclar/sec.py "buzdolabı ışığı" --kaydet

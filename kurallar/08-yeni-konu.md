@@ -5,10 +5,10 @@ Temalar her konuda hazırdır. Her yeni konuda yalnız nesne, sahne sırası ve 
 ## Adımlar
 
 ```bash
-bash ~/.claude/skills/animasyon-studyosu/scripts/yeni_proje.sh buzdolabi --tarz blueprint
+bash <animasyon-studyosu>/scripts/yeni_proje.sh buzdolabi --tarz blueprint
 python araclar/sec.py "buzdolabı ışığı" --kaydet
-python araclar/kur.py /c/Users/Lenovo/buzdolabi_anim/film --palet zumrut --sekil atlas --kompozisyon buyutec
-cd /c/Users/Lenovo/buzdolabi_anim/film
+python araclar/kur.py ~/buzdolabi_anim/film --palet zumrut --sekil atlas --kompozisyon buyutec
+cd ~/buzdolabi_anim/film
 cp src/canvas-core/kesitornek.ts src/canvas-core/buzdolabi.ts
 ```
 
