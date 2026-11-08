@@ -5,22 +5,30 @@ Temalar her konuda hazırdır. Her yeni konuda yalnız nesne, sahne sırası ve 
 ## Adımlar
 
 ```bash
-bash <animasyon-studyosu>/scripts/yeni_proje.sh buzdolabi --tarz blueprint
-python araclar/sec.py "buzdolabı ışığı" --kaydet
-python araclar/kur.py ~/buzdolabi_anim/film --palet zumrut --sekil atlas --kompozisyon buyutec
-cd ~/buzdolabi_anim/film
-cp src/canvas-core/kesitornek.ts src/canvas-core/buzdolabi.ts
+bash kur.sh                                   # bir kez
+python araclar/sec.py "buzdolabı ışığı"
+bash yeni.sh buzdolabi
+python araclar/kelimeler.py ses/anlatim.wav   # CAP tablosu
 ```
 
-`buzdolabi.ts` içinde şunları değiştir:
+`motor/src/canvas-core/buzdolabi.ts` içinde şunları değiştir:
 
-1. Sondaki `export const kesitornek` adını `buzdolabi` yap, `meta.title` alanını da değiştir.
-2. `CAP` tablosunu kayıttan çıkan kelime zamanlarıyla yaz.
+1. `CAP` tablosunu `kelimeler.py` çıktısıyla değiştir. Yazımı düzelt, vurgulanacak kelimelere `true` ekle.
+2. `DURATION` değerini son kelimenin bitişi + 1,7 saniye olarak yaz, 30 ile çarp.
 3. `ANTET` yazısını konuya göre yaz.
 4. `jar` işlevinin yerine yeni nesneyi çiz.
-5. `ciz` içindeki sahneleri cümlelere göre kur.
+5. `ciz` içindeki sahne aralıklarını cümlelere göre kur.
 
-`kesitornek.ts` dosyasını silme. Vitrin onu kullanır.
+Sonra:
+
+```bash
+cd motor && node tools/still.mjs buzdolabi --frames 30,200,400,600 --scale 0.4 --out out/buzdolabi/ --sheet out/buzdolabi.jpg
+cd .. && bash video.sh buzdolabi --palet zumrut --sekil atlas --kompozisyon buyutec --ses ses/anlatim.wav --muzik ses/muzik.mp3
+```
+
+`kesitornek.ts` dosyasını değiştirme. Vitrin onu kullanır.
+
+Animasyon Stüdyosu kullanıyorsan `yeni_proje.sh` ile açtığın film klasörüne kiti `python araclar/kur.py <film klasörü>` ile kurabilirsin. Adımlar aynıdır.
 
 ## Nesne çizerken
 

@@ -45,6 +45,11 @@ export const ra = (hex: string, a: number) => {
   const n = parseInt(hex.slice(1), 16);
   return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
 };
+// font stacks: Windows first (the published look), then the closest families on macOS and Linux
+export const MONO = 'Consolas, Menlo, "DejaVu Sans Mono", monospace';
+export const SANS = '"Segoe UI", "Helvetica Neue", Arial, sans-serif';
+export const EL = '"Segoe Print", "Bradley Hand", "Comic Sans MS", cursive';
+export const SERIF = 'Georgia, "Times New Roman", serif';
 const yuvarlak = (c: Ctx, x: number, y: number, w: number, h: number, r: number) => { c.beginPath(); (c as any).roundRect(x, y, w, h, r); };
 
 // ---------------------------------------------------------------- the pen: every outline goes through here
@@ -135,18 +140,18 @@ export const cerceve = (c: Ctx, T: Tema, t: number, antet: Antet, adim = 0, topl
     c.strokeStyle = ra(p.murekkep, 0.55); c.lineWidth = 2; c.strokeRect(46, 1760, 988, 114);
     c.beginPath(); c.moveTo(620, 1760); c.lineTo(620, 1874); c.moveTo(830, 1760); c.lineTo(830, 1874); c.stroke();
     c.textBaseline = "alphabetic"; c.textAlign = "left";
-    c.fillStyle = p.cizgi; c.font = `600 19px Consolas, monospace`;
+    c.fillStyle = p.cizgi; c.font = `600 19px ${MONO}`;
     c.fillText("PARÇA", 66, 1792); c.fillText("ÖLÇEK", 640, 1792); c.fillText("PAFTA", 850, 1792);
-    c.fillStyle = p.murekkep; c.font = `700 32px Consolas, monospace`;
+    c.fillStyle = p.murekkep; c.font = `700 32px ${MONO}`;
     c.fillText(antet.parca, 66, 1840); c.fillText(antet.olcek ?? "ŞEMA", 640, 1840); c.fillText(antet.no, 850, 1840);
   } else if (s.cerceve === "defter") {
     c.strokeStyle = ra(p.vurgu, 0.55); c.lineWidth = 3; c.beginPath(); c.moveTo(118, 0); c.lineTo(118, 1920); c.stroke();
     for (let i = 0; i < 6; i++) { const y = 200 + i * 310; c.fillStyle = p.zemin2; c.beginPath(); c.arc(58, y, 22, 0, 7); c.fill(); c.strokeStyle = ra(p.cizgi, 0.5); c.lineWidth = 2; c.stroke(); }
-    c.fillStyle = p.cizgi; c.font = `700 30px "Segoe Print", sans-serif`; c.textAlign = "right"; c.textBaseline = "alphabetic"; c.fillText(antet.no, 1020, 1860);
+    c.fillStyle = p.cizgi; c.font = `700 30px ${EL}`; c.textAlign = "right"; c.textBaseline = "alphabetic"; c.fillText(antet.no, 1020, 1860);
   } else if (s.cerceve === "patent") {
     c.strokeStyle = p.murekkep; c.lineWidth = 2; c.strokeRect(54, 54, 972, 1812);
-    c.fillStyle = p.murekkep; c.font = `italic 700 34px Georgia, serif`; c.textAlign = "center"; c.textBaseline = "alphabetic"; c.fillText(antet.parca, 540, 1810);
-    c.font = `italic 26px Georgia, serif`; c.fillStyle = p.cizgi; c.fillText(antet.no, 540, 1846);
+    c.fillStyle = p.murekkep; c.font = `italic 700 34px ${SERIF}`; c.textAlign = "center"; c.textBaseline = "alphabetic"; c.fillText(antet.parca, 540, 1810);
+    c.font = `italic 26px ${SERIF}`; c.fillStyle = p.cizgi; c.fillText(antet.no, 540, 1846);
   } else if (s.cerceve === "hud") {
     c.save(); c.shadowColor = p.vurgu; c.shadowBlur = 10; c.strokeStyle = p.vurgu; c.lineWidth = 5; c.beginPath();
     [[46, 46, 1, 1], [1034, 46, -1, 1], [46, 1874, 1, -1], [1034, 1874, -1, -1]].forEach(([x, y, a, b]) => { c.moveTo(x + a * 90, y); c.lineTo(x, y); c.lineTo(x, y + b * 90); });
@@ -158,7 +163,7 @@ export const cerceve = (c: Ctx, T: Tema, t: number, antet: Antet, adim = 0, topl
     c.save(); c.shadowColor = p.vurgu; c.shadowBlur = 12; c.strokeStyle = p.vurgu; c.lineWidth = 4; c.beginPath();
     for (let x = 80; x <= 1000; x += 6) { const y = 1785 + Math.sin(x * 0.035 + t * 7) * 30 * Math.sin(x * 0.0034 + t * 0.8); if (x === 80) c.moveTo(x, y); else c.lineTo(x, y); }
     c.stroke(); c.restore();
-    c.fillStyle = p.cizgi; c.font = `700 26px Consolas, monospace`; c.textAlign = "left"; c.textBaseline = "alphabetic";
+    c.fillStyle = p.cizgi; c.font = `700 26px ${MONO}`; c.textAlign = "left"; c.textBaseline = "alphabetic";
     c.fillText(`T+${t.toFixed(1).padStart(4, "0")} SN`, 80, 1858); c.textAlign = "right"; c.fillText(antet.no, 1000, 1858);
   } else if (s.cerceve === "kart") {
     c.strokeStyle = ra(p.cizgi, 0.5); c.lineWidth = 3; yuvarlak(c, 44, 44, 992, 1832, 44); c.stroke();
@@ -169,7 +174,7 @@ export const cerceve = (c: Ctx, T: Tema, t: number, antet: Antet, adim = 0, topl
         c.fillStyle = i < adim ? p.vurgu : ra(p.cizgi, 0.25); c.fill();
       }
     }
-    c.fillStyle = p.cizgi; c.font = `700 26px "Segoe UI", sans-serif`; c.textAlign = "left"; c.textBaseline = "alphabetic"; c.fillText(antet.parca, 100, 1838);
+    c.fillStyle = p.cizgi; c.font = `700 26px ${SANS}`; c.textAlign = "left"; c.textBaseline = "alphabetic"; c.fillText(antet.parca, 100, 1838);
   }
 };
 
@@ -182,7 +187,7 @@ export const baslik = (c: Ctx, T: Tema, t: number, t0: number, etiket: string, a
 
   if (B.tip === "blok") {
     c.fillStyle = vurgu; c.beginPath(); c.arc(92, 127, 9, 0, 7); c.fill();
-    c.fillStyle = p.cizgi; c.font = `700 32px Consolas, monospace`; c.textAlign = "left"; c.fillText(etiket, 114, 138);
+    c.fillStyle = p.cizgi; c.font = `700 32px ${MONO}`; c.textAlign = "left"; c.fillText(etiket, 114, 138);
     c.translate(84, 245); c.scale(lerp(0.86, 1, pop), lerp(0.86, 1, pop));
     c.font = f(900); const w = c.measureText(a + " ").width, k = sigdir(c, 912, a + " " + b); c.scale(k, k);
     c.lineWidth = 12; c.strokeStyle = p.koyu ? p.zemin2 : p.isik; c.strokeText(a, 0, 0); c.strokeText(b, w, 0);
@@ -201,7 +206,7 @@ export const baslik = (c: Ctx, T: Tema, t: number, t0: number, etiket: string, a
     c.textAlign = "left"; c.fillStyle = p.murekkep; c.fillText(a, -tw / 2, 0); c.fillStyle = vurgu; c.fillText(b, -tw / 2 + aw, 0);
     c.strokeStyle = p.murekkep; c.lineWidth = 2; const e = (tw / 2) * eo(seg(t, t0, t0 + 0.4)); c.beginPath(); c.moveTo(-e, 32); c.lineTo(e, 32); c.stroke();
   } else if (B.tip === "afis") {
-    c.fillStyle = p.yazi; c.font = `700 30px Consolas, monospace`; c.textAlign = "left"; c.fillText(etiket, 64, 76);
+    c.fillStyle = p.yazi; c.font = `700 30px ${MONO}`; c.textAlign = "left"; c.fillText(etiket, 64, 76);
     const satir = (yazi: string, y: number, col: string, gecik: number) => {
       const u = back(seg(t, t0 + gecik, t0 + gecik + 0.26));
       c.save(); c.translate(60, y); c.scale(lerp(0.9, 1, u), lerp(0.9, 1, u)); c.font = f(400); const k = sigdir(c, 960, yazi); c.scale(k, k); c.textAlign = "left"; c.fillStyle = col; c.fillText(yazi, 0, 0); c.restore();
@@ -222,7 +227,7 @@ export const baslik = (c: Ctx, T: Tema, t: number, t0: number, etiket: string, a
     const u = back(seg(t, t0, t0 + 0.3));
     c.save(); c.translate(150, 190); c.scale(u, u); c.fillStyle = vurgu; c.beginPath(); c.arc(0, 0, 62, 0, 7); c.fill();
     c.fillStyle = p.zemin2; c.font = `900 70px ${B.font}`; c.textAlign = "center"; c.textBaseline = "middle"; c.fillText(adim > 0 ? String(adim) : "?", 0, 4); c.restore();
-    c.fillStyle = p.cizgi; c.font = `700 30px "Segoe UI", sans-serif`; c.textAlign = "left"; c.textBaseline = "alphabetic"; c.fillText(etiket, 238, 142);
+    c.fillStyle = p.cizgi; c.font = `700 30px ${SANS}`; c.textAlign = "left"; c.textBaseline = "alphabetic"; c.fillText(etiket, 238, 142);
     c.font = f(900); const w = c.measureText(a + " ").width, k = sigdir(c, 750, a + " " + b); c.translate(236, 234); c.scale(k, k);
     c.fillStyle = p.murekkep; c.fillText(a, 0, 0); c.fillStyle = vurgu; c.fillText(b, w, 0);
   }
@@ -282,7 +287,7 @@ export const not = (c: Ctx, T: Tema, t: number, t0: number, x: number, y: number
   c.beginPath(); c.arc(x, y, 7, 0, 7); c.fill();
   c.beginPath(); c.moveTo(x, y); c.lineTo(lerp(x, tx, u), lerp(y, ty, u)); c.stroke();
   if (u > 0.6) {
-    c.globalAlpha = seg(u, 0.6, 1); c.font = `700 36px ${s.not === "sade" ? s.altyazi.font : "Consolas, monospace"}`; c.textBaseline = "middle"; c.textAlign = "left";
+    c.globalAlpha = seg(u, 0.6, 1); c.font = `700 36px ${s.not === "sade" ? s.altyazi.font : MONO}`; c.textBaseline = "middle"; c.textAlign = "left";
     const w = c.measureText(yazi).width, bx = tx < x ? tx - w - 28 : tx;
     if (s.not === "kutu") { c.fillStyle = p.zemin2; yuvarlak(c, bx, ty - 30, w + 28, 60, 8); c.fill(); c.lineWidth = 2.5; c.stroke(); }
     c.fillStyle = col; c.fillText(yazi, bx + 14, ty + 1);
@@ -299,7 +304,7 @@ export const gosterge = (c: Ctx, T: Tema, t: number, x: number, y: number, r: nu
   for (let i = 0; i <= 10; i++) { const a = Math.PI * (0.75 + 1.5 * (i / 10)); c.beginPath(); c.moveTo(x + Math.cos(a) * r * 0.78, y + Math.sin(a) * r * 0.78); c.lineTo(x + Math.cos(a) * r * 0.9, y + Math.sin(a) * r * 0.9); c.stroke(); }
   const a = Math.PI * (0.75 + 1.5 * v); c.strokeStyle = p.tehlike; c.lineWidth = 8; c.lineCap = "round"; c.beginPath(); c.moveTo(x, y); c.lineTo(x + Math.cos(a) * r * 0.72, y + Math.sin(a) * r * 0.72); c.stroke();
   c.fillStyle = p.murekkep; c.beginPath(); c.arc(x, y, 11, 0, 7); c.fill();
-  c.font = `700 25px Consolas, monospace`; c.textAlign = "center"; c.textBaseline = "middle"; c.fillStyle = p.cizgi; c.fillText(etiket, x, y + r * 0.52); c.restore();
+  c.font = `700 25px ${MONO}`; c.textAlign = "center"; c.textBaseline = "middle"; c.fillStyle = p.cizgi; c.fillText(etiket, x, y + r * 0.52); c.restore();
 };
 export const ok = (c: Ctx, x: number, y: number, boy: number, renk: string, en = 15) => {
   c.save(); c.translate(x, y); c.fillStyle = renk; c.strokeStyle = renk; c.lineWidth = en; c.lineCap = "round";

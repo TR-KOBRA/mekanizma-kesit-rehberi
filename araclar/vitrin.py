@@ -15,7 +15,9 @@ cikti.mkdir(parents=True, exist_ok=True)
 paletler = json.loads((KOK / "temalar/paletler.json").read_text(encoding="utf-8"))
 sekiller = json.loads((KOK / "temalar/sekiller.json").read_text(encoding="utf-8"))
 P, S = list(paletler), list(sekiller)
-FONT = "C:/Windows/Fonts/segoeuib.ttf"
+ADAY = ["C:/Windows/Fonts/segoeuib.ttf", "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf"]
+FONT = next((f for f in ADAY if pathlib.Path(f).exists()), None)
 
 def kare(i):
     return Image.open(kare_dir / f"kesitvitrin-{i}.png").convert("RGB")
@@ -27,7 +29,7 @@ def uyumlu(p, s):
 def izgara(hucreler, sutun, en, ad, baslik, yazi=25):
     """hucreler: (görsel ya da None, etiket) listesi"""
     boy = int(en * 16 / 9); bosluk = 18; ust = 40; et = 52
-    f = ImageFont.truetype(FONT, yazi); fb = ImageFont.truetype(FONT, 36)
+    f = ImageFont.truetype(FONT, yazi) if FONT else ImageFont.load_default(); fb = ImageFont.truetype(FONT, 36) if FONT else ImageFont.load_default()
     satir = (len(hucreler) + sutun - 1) // sutun
     W = bosluk + sutun * (en + bosluk); H = ust + 54 + satir * (boy + et + bosluk)
     tuval = Image.new("RGB", (W, H), "#f4f2ec"); d = ImageDraw.Draw(tuval)

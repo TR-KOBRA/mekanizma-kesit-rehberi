@@ -6,7 +6,8 @@ import { type Satir, type Tema, altyazi, back, baslik, buyut, buyutec, cerceve, 
 // Worked example: the "tik" of a jar lid. Only the subject lives here (the jar, the scene order and
 // the word timings); colours, type, frame and caption all come from the theme, so the same file
 // renders in any palette x shape x composition. To make a new film, copy this file and replace
-// jar(), CAP and the scene list. Times are from the voice recording (kayit/kelimeler.json).
+// jar(), CAP, ANTET, DURATION and the scene list. Times are from the voice recording
+// (araclar/kelimeler.py prints CAP from it).
 
 const FPS = 30, DURATION = 780;
 
@@ -155,7 +156,7 @@ export const ciz = (c: Ctx, T: Tema, komp: string, t: number) => {
   cerceve(c, T, t, ANTET, adim, 5);
   altyazi(c, T, t, CAP);
   // in from the sheet colour, slow fade at the end
-  const fade = Math.max(1 - seg(t, 0, 0.1), seg(t, 25.4, 26));
+  const fade = Math.max(1 - seg(t, 0, 0.1), seg(t, DURATION / FPS - 0.6, DURATION / FPS));
   if (fade > 0) { c.save(); c.globalAlpha = fade; c.fillStyle = p.zemin2; c.fillRect(0, 0, 1080, 1920); c.restore(); }
 };
 

@@ -1,50 +1,182 @@
 {
   "pafta": {
-    "ad": "Teknik Pafta", "uyum": "hepsi", "varsayilan_palet": "prusya",
+    "ad": "Teknik Pafta",
+    "uyum": "hepsi",
+    "varsayilan_palet": "prusya",
     "ne_zaman": "makine, cihaz, ölçülebilir her şey",
-    "zemin": "izgara", "cerceve": "pafta", "alan": { "ust": 290, "alt": 1440 },
-    "baslik": { "tip": "blok", "font": "\"Arial Black\", \"Segoe UI Black\", Arial, sans-serif", "boyut": 92 },
-    "altyazi": { "tip": "kutu", "font": "\"Segoe UI\", Arial, sans-serif", "boyut": 52, "y": 1560 },
-    "cizgi": { "kalinlik": 1, "titreme": 0, "parlama": 0 }, "dolgu": "kademeli", "not": "kutu"
+    "zemin": "izgara",
+    "cerceve": "pafta",
+    "alan": {
+      "ust": 290,
+      "alt": 1440
+    },
+    "baslik": {
+      "tip": "blok",
+      "font": "\"Arial Black\", \"Segoe UI Black\", \"Helvetica Neue\", Arial, sans-serif",
+      "boyut": 92
+    },
+    "altyazi": {
+      "tip": "kutu",
+      "font": "\"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif",
+      "boyut": 52,
+      "y": 1560
+    },
+    "cizgi": {
+      "kalinlik": 1,
+      "titreme": 0,
+      "parlama": 0
+    },
+    "dolgu": "kademeli",
+    "not": "kutu"
   },
   "kareli": {
-    "ad": "Kareli Defter", "uyum": "acik", "varsayilan_palet": "eskikagit",
+    "ad": "Kareli Defter",
+    "uyum": "acik",
+    "varsayilan_palet": "eskikagit",
     "ne_zaman": "okul, ev bilgisi, samimi anlatım",
-    "zemin": "kareli", "cerceve": "defter", "alan": { "ust": 290, "alt": 1440 },
-    "baslik": { "tip": "marker", "font": "\"Segoe Print\", \"Comic Sans MS\", sans-serif", "boyut": 86 },
-    "altyazi": { "tip": "kagit", "font": "\"Segoe Print\", \"Comic Sans MS\", sans-serif", "boyut": 42, "y": 1570 },
-    "cizgi": { "kalinlik": 1.1, "titreme": 2.2, "parlama": 0 }, "dolgu": "duz", "not": "sade"
+    "zemin": "kareli",
+    "cerceve": "defter",
+    "alan": {
+      "ust": 290,
+      "alt": 1440
+    },
+    "baslik": {
+      "tip": "marker",
+      "font": "\"Segoe Print\", \"Bradley Hand\", \"Comic Sans MS\", cursive",
+      "boyut": 86
+    },
+    "altyazi": {
+      "tip": "kagit",
+      "font": "\"Segoe Print\", \"Bradley Hand\", \"Comic Sans MS\", cursive",
+      "boyut": 42,
+      "y": 1570
+    },
+    "cizgi": {
+      "kalinlik": 1.1,
+      "titreme": 2.2,
+      "parlama": 0
+    },
+    "dolgu": "duz",
+    "not": "sade"
   },
   "patent": {
-    "ad": "Patent Çizimi", "uyum": "acik", "varsayilan_palet": "buz",
+    "ad": "Patent Çizimi",
+    "uyum": "acik",
+    "varsayilan_palet": "buz",
     "ne_zaman": "icat hikâyesi, tarih, 'bunu kim buldu' konuları",
-    "zemin": "duz", "cerceve": "patent", "alan": { "ust": 320, "alt": 1440 },
-    "baslik": { "tip": "serif", "font": "Georgia, \"Times New Roman\", serif", "boyut": 84 },
-    "altyazi": { "tip": "sade", "font": "Georgia, \"Times New Roman\", serif", "boyut": 50, "y": 1570 },
-    "cizgi": { "kalinlik": 0.7, "titreme": 0, "parlama": 0 }, "dolgu": "tarama", "not": "sade"
+    "zemin": "duz",
+    "cerceve": "patent",
+    "alan": {
+      "ust": 320,
+      "alt": 1440
+    },
+    "baslik": {
+      "tip": "serif",
+      "font": "Georgia, \"Times New Roman\", serif",
+      "boyut": 84
+    },
+    "altyazi": {
+      "tip": "sade",
+      "font": "Georgia, \"Times New Roman\", serif",
+      "boyut": 50,
+      "y": 1570
+    },
+    "cizgi": {
+      "kalinlik": 0.7,
+      "titreme": 0,
+      "parlama": 0
+    },
+    "dolgu": "tarama",
+    "not": "sade"
   },
   "poster": {
-    "ad": "Afiş", "uyum": "hepsi", "varsayilan_palet": "hardal",
+    "ad": "Afiş",
+    "uyum": "hepsi",
+    "varsayilan_palet": "hardal",
     "ne_zaman": "en sert kancalar, 'yanlış biliyorsun' konuları",
-    "zemin": "ikiton", "cerceve": "yok", "alan": { "ust": 470, "alt": 1440 },
-    "baslik": { "tip": "afis", "font": "Impact, \"Arial Black\", sans-serif", "boyut": 150 },
-    "altyazi": { "tip": "serit", "font": "\"Segoe UI\", Arial, sans-serif", "boyut": 58, "y": 1650 },
-    "cizgi": { "kalinlik": 1.5, "titreme": 0, "parlama": 0 }, "dolgu": "duz", "not": "kutu"
+    "zemin": "ikiton",
+    "cerceve": "yok",
+    "alan": {
+      "ust": 470,
+      "alt": 1440
+    },
+    "baslik": {
+      "tip": "afis",
+      "font": "Impact, \"Arial Black\", sans-serif",
+      "boyut": 150
+    },
+    "altyazi": {
+      "tip": "serit",
+      "font": "\"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif",
+      "boyut": 58,
+      "y": 1650
+    },
+    "cizgi": {
+      "kalinlik": 1.5,
+      "titreme": 0,
+      "parlama": 0
+    },
+    "dolgu": "duz",
+    "not": "kutu"
   },
   "osiloskop": {
-    "ad": "Osiloskop", "uyum": "koyu", "varsayilan_palet": "patlican",
+    "ad": "Osiloskop",
+    "uyum": "koyu",
+    "varsayilan_palet": "patlican",
     "ne_zaman": "elektrik, ses, sinyal, dijital konular",
-    "zemin": "nokta", "cerceve": "hud", "alan": { "ust": 290, "alt": 1440 },
-    "baslik": { "tip": "terminal", "font": "Consolas, \"Courier New\", monospace", "boyut": 84 },
-    "altyazi": { "tip": "terminal", "font": "Consolas, \"Courier New\", monospace", "boyut": 46, "y": 1560 },
-    "cizgi": { "kalinlik": 0.8, "titreme": 0, "parlama": 16 }, "dolgu": "raster", "not": "kutu"
+    "zemin": "nokta",
+    "cerceve": "hud",
+    "alan": {
+      "ust": 290,
+      "alt": 1440
+    },
+    "baslik": {
+      "tip": "terminal",
+      "font": "Consolas, Menlo, \"DejaVu Sans Mono\", \"Courier New\", monospace",
+      "boyut": 84
+    },
+    "altyazi": {
+      "tip": "terminal",
+      "font": "Consolas, Menlo, \"DejaVu Sans Mono\", \"Courier New\", monospace",
+      "boyut": 46,
+      "y": 1560
+    },
+    "cizgi": {
+      "kalinlik": 0.8,
+      "titreme": 0,
+      "parlama": 16
+    },
+    "dolgu": "raster",
+    "not": "kutu"
   },
   "atlas": {
-    "ad": "Ders Atlası", "uyum": "hepsi", "varsayilan_palet": "zumrut",
+    "ad": "Ders Atlası",
+    "uyum": "hepsi",
+    "varsayilan_palet": "zumrut",
     "ne_zaman": "adım adım anlatım, sayılı süreçler",
-    "zemin": "panel", "cerceve": "kart", "alan": { "ust": 300, "alt": 1430 },
-    "baslik": { "tip": "rozet", "font": "\"Segoe UI Black\", \"Arial Black\", sans-serif", "boyut": 84 },
-    "altyazi": { "tip": "hap", "font": "\"Segoe UI\", Arial, sans-serif", "boyut": 50, "y": 1555 },
-    "cizgi": { "kalinlik": 1, "titreme": 0, "parlama": 0 }, "dolgu": "kademeli", "not": "kutu"
+    "zemin": "panel",
+    "cerceve": "kart",
+    "alan": {
+      "ust": 300,
+      "alt": 1430
+    },
+    "baslik": {
+      "tip": "rozet",
+      "font": "\"Segoe UI Black\", \"Arial Black\", \"Helvetica Neue\", sans-serif",
+      "boyut": 84
+    },
+    "altyazi": {
+      "tip": "hap",
+      "font": "\"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif",
+      "boyut": 50,
+      "y": 1555
+    },
+    "cizgi": {
+      "kalinlik": 1,
+      "titreme": 0,
+      "parlama": 0
+    },
+    "dolgu": "kademeli",
+    "not": "kutu"
   }
 }

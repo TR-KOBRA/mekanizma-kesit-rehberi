@@ -5,3 +5,5 @@ __pycache__/
 *.mp3
 node_modules/
 out/
+motor/
+cikti/
